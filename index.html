@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>tjr</title>
+    </head>
+    <style>
+    @font-face {
+        font-family: 'a시월구일3';
+        src: url(./font/a시월구일3.ttf) format('truetype');
+    }
+        .container {
+            width: 1000px;
+            height: 500px;
+            position: relative;
+        }
+        #div1 {
+            background-image: url('./img/tjr.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #div2{
+            height: 580px;
+        }
+        #tjr1-img {
+            cursor: pointer;
+            width: 425px;
+            height: 425px;
+            position: absolute;
+            left: 25px;
+            top: 49px;
+            box-shadow: 5px 5px 15px black;
+        }
+        #tjr1-title {
+            text-align: left;
+            font-size: 35px;
+        }
+        #tjr1-content {
+            font-size: 18px;
+            color: black;
+            text-align: left;
+            font-family: 'a시월구일1';
+            vertical-align: middle;     
+        }
+        #main-box {
+            position: absolute;
+            left: 487px;
+            top: 151px;
+            font-family: 'a시월구일3';    
+        }
+        #sub-box {
+            font-family: 'a시월구일3';
+            background: #e9eaeb;
+            position: absolute;
+            width: 213px;
+            height: 100px;
+            right: 20px;
+            top: 54px;
+        }
+        #sub-box h2 {
+            font-size: 35px;
+            text-align: right;
+            margin: 9px;
+            font-weight: 100;            
+        }
+        #oto-title{
+            position: absolute;
+            font-family: 'a시월구일3';
+            font-size: 35px;
+            text-align: right;
+            bottom: 20px;
+            right: 40px;
+        }
+        #oto-img{
+            position: absolute;
+            right: 40px;
+            top: 35px;
+            box-shadow: 5px 5px 15px black;
+            /*height: 500px;*/
+            /*width: 500px;*/
+        }
+        #div3{
+            height: 680px;
+            background: #e9eaeb;
+        }
+        #oto-main-box{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 8px solid white;
+            left: 40px;
+            bottom: 45px;
+            border-radius: 35px;
+        }
+        #oto-content{
+            font-family: 'a시월구일1';
+            color: gray;
+            vertical-align: middle;      
+            padding: 50px 10px;      
+        }
+        #div4{
+            background: #e9eaeb;
+            height: 750px;
+        }
+        #wwp-img{
+            position: absolute;
+            width: 100%;
+            left:0px;
+            top: 15px;
+        }
+        #wwp-title{
+            position: absolute;
+            font-family: 'a시월구일3';
+            font-size: 35px;
+            text-align: right;
+            top: 400px;
+            right: 40px;
+        }
+        #wwp-content{
+            position: absolute;
+            font-family: 'a시월구일1';
+            color: gray;
+            vertical-align: middle;      
+            text-align: right;
+            top: 500px; 
+            right: 30px;
+        }
+        #square{
+            font-family: 'a시월구일3';
+            background: #9A9999;
+            position: absolute;
+            width: 230px;
+            height: 100px;
+            left: 0px;
+            bottom: 0px;
+        }
+        #square h4{
+            position: absolute;
+            font-size: 35px;
+            text-align: center;
+            margin: 9px;
+            font-weight: 100; 
+            top: 25px;
+            left: 8px;
+            }        
+        #div5{
+            background: #9A9999; 
+            height: 420px;
+        }
+        .box_img{
+            float: left;
+            width: 15%;
+            margin: 5%;
+            height: 150px;
+            box-shadow: 5px 5px 15px black;
+
+        }
+        #div5 p{
+            /*position: absolute;*/
+            font-family: 'a시월구일3';
+            text-align: center;
+            float: left;
+            width: 15%;
+            padding: 0% 5%;
+            bottom: 10px;
+        }
+        #div6{
+            height: 650px;
+            font-family: 'a시월구일1';
+
+        }
+        #face-img{
+            position: absolute;
+            width: 600px;
+            height: :320px;
+            top: 160px;
+            left: 100px;
+            box-shadow: 5px 5px 15px black;
+
+        }
+        #face-content{
+            position: absolute;
+            color: gray;
+            vertical-align: middle;      
+            top:280px;
+            right: 40px;
+        }
+        #face-content2{
+            position: absolute;
+            text-align: center;
+            color: gray;
+            top: 480px;
+            left: 225px;
+
+        }
+        #sub-box1{
+            position: absolute;
+            font-family: 'a시월구일3';
+            background: #e9eaeb;
+            width: 300px;
+            height: 100px;
+            right: 40px;
+            top: 100px;
+        
+        }
+        #sub-box1 h5{
+             position: absolute;
+            font-size: 35px;
+            text-align: center;
+            margin: 9px;
+            font-weight: 100; 
+            top: 20px;
+            left: 70px;
+
+        }
+        #arena{
+            height: 1000px;
+            background: #000;
+            
+        }
+        #arena-img{
+            position: absolute;
+            top: 200px;
+            left: 250px;
+            width: 500px
+        }
+        #arena-content{
+            font-size: 15px;
+            position: absolute;
+            font-family: 'a시월구일1';
+            color: white;
+            vertical-align: middle;      
+            text-align: right;
+            top: 700px; 
+            right: 155px;
+            text-align: center;
+        }
+        #arena h6{
+            position: absolute;
+            top: 15px;
+            left: 350px;
+            font-family: 'a시월구일3';
+            color:white;
+            font-size: 35px;
+        }
+
+    </style>
+    <body>
+
+        <center>
+            <div class="container" id="div1"></div>
+            <div class="container" id="div2">
+                <img id="tjr1-img" src="./img/tjr1.jpg">
+                <div id="main-box">
+                    <h1 id="tjr1-title">
+                        TJR
+                    </h1>
+                    <p id="tjr1-content">
+                        TJ Rozdilsky<br>
+                        댄스·일렉트로닉 DJ/프로듀서<br>
+                        1983년 3월 15일, 미국 코네티컷 주 댄베리 출생<br>
+                        2005년, 샌디에고 로컬 DJ로 활동<br>
+                        2010년, LA 활동 이후로 꾸준한 상승세<br><br>
+                        보이스샘플, 멜버른 사운드를 재료로 신선한 하드트랙를<br>
+                        만들어 강한 중독성을 가지고 있는 것이 특징이다.<br><br>
+                        Pitbull, Cardi B, Vinai 등 여러 해외 유명 아티스트와의<br>
+                        콜라보레이션을 선보였으며 수많은 리믹스를 볼 수 있다.<br>
+                    </p>
+                </div>
+                <div id="sub-box">
+                    <h2>
+                        클럽음악의<br>
+                        황제
+                    </h2>
+                </div>
+                <div id="oto-title">ODE TO OI(2013)</div>
+            </div>
+            <div class="container" id="div3">
+                 <img id="oto-img" src="./img/aaa.jpg">
+                 <div id="oto-main-box">
+                    <p id="oto-content">
+                     TJR의 공식 데뷔곡.현재 KIA 타이거즈에서 풀카운트 응원송으로 사용중이다.반복되는 Oi에 맞추어 기합을 주는 것이 포인트이다.
+                    Ode는 노래라는 뜻이고, Oi는 영국 노동 계층 청소년들이 Hi, Hello 대신 사용하는 인삿말이라고 한다.
+                    쉽게 말해 인사하는 노래 정도로 생각하면 좋을 듯 하다.
+                    </p>
+                 </div> 
+            </div>
+            <div class="container" id="div4">
+                <img id="wwp-img" src="./img/wwp.jpg">
+                <h3 id="wwp-title">WE WANNA PARTY(2016)</h3>
+                <p id="wwp-content">
+                    TJR의 작업물중 가장 대중적이라고 보아도 무방하며  싸이 『NEW FACE』 샘플링으로도 유명하다.<br>
+                    중독성 있는 드롭 부분과 관객 호응을 유도하기에 적합한 후렴구로 클럽 DJ들에게 꾸준히 사랑받고있으며 <br>클러버가 아닌 일반인들도 한번쯤은 들어봤을 정도로 인기있는 곡 중 하나이다.
+                </p>
+                <div class="container" id="square">
+                    <h4>
+                        그 외 대표작
+                    </h4>
+                </div>
+            </div>
+            <div class="container" id="div5">
+                <img class="box_img" src="./img/freak.jpg">
+                <img class="box_img" src="./img/fmp.jpg">
+                <img class="box_img" src="./img/dstp.jpg">
+                <img class="box_img" src="./img/dw.jpg">                  
+                <p>FREAKS(2016)</p>
+                <p>FUCK ME UP(2016)</p>
+                <p>DON’T STOP THE PARTY<br>_Featuring(2017)</p> 
+                <p>DIK WORK(2017)</p>
+            </div>
+            </div>
+            <div class="container" id="div6">
+                <div id="sub-box1">
+                    <h5>
+                        반전매력
+                    </h5>           
+                </div>
+                <img id="face-img" src="./img/face.jpg">
+                <p id="face-content">
+                    TJR이 SNS에 업로드하는<br>영상을 살펴보면 카리스마 <br>넘치는 겉모습과 달리 부드럽고<br> 장난기넘치는 모습을 볼 수 있다.<br>
+                    의외로 귀여운 면모를 보여주며 <br>팬들에게‘타조알’이라는 <br>애칭으로 불리기도 한다고한다.
+                </p>
+                <p id="face-content2">
+                    Official Web site: https://iamtjr.com/<br>
+                    Facebook: https://www.facebook.com/IAMTJR
+                </p>
+            </div>
+            <div class="container" id="arena">
+                <img id="arena-img" src="./img/arena.jpg">
+                <h6>내한공연 in ARENA</h6>
+                <p id="arena-content">작년 2017년 4월 22일 강남 클럽 옥타곤에서 내한 공연을 성공적으로 마친 TJR은<br>올해 2018년 4월 13일 신사역 3번 출구에 위치한 클럽 아레나에서 내한 공연을 선보일 예정이다.<br>한국에 EDM 돌풍을 가지고 왔으며 전 세계 페스티벌과 클럽씬에서 러브콜을 받는 멜버른 하우스의 강자<br>TJR의 화려한 퍼포먼스와 수많은 히트곡을 만날 수 있을 것이다.<br>EDM에 관심이 있거나 TJR의 음악을 사랑하는 사람이라면 놓쳐서는 안될 절호의 찬스로 보인다.</p>
+            </div>
+            
+        </center>
+    </body>
+</html>
